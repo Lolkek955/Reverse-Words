@@ -25,9 +25,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultscreen: UILabel!
     
+    
     @IBAction func actreverse(_ sender: UIButton!) {
         let sampleSentence = sample
-                
+        sender.isSelected.toggle();
+        if sender.isSelected{
             func reverseWolrdsInSentance(sentanse:String) -> String{
                 let allWords = sampleSentence.components(separatedBy: " ")
                 var newSentence = ""
@@ -40,11 +42,14 @@ class ViewController: UIViewController {
                 return newSentence}
                 resultscreen.text = reverseWolrdsInSentance(sentanse: sampleSentence)
         
-                actReverseStyle.setTitle("Clear", for: .normal)
-            }
+                actReverseStyle.setTitle("Clear", for: .normal)}
+            else
+            {self.sampletext.text = nil
+             self.resultscreen.text = nil
+                actReverseStyle.setTitle("Reverse", for: .normal)}
             
-   
-    }
+        }
+            }
     
   
     
