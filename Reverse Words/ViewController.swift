@@ -12,33 +12,45 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet var actReverseStyle: UIButton!
+    
+    
+    
+    
     @IBOutlet weak var sampletext: UITextField!
+    var sample: String {return sampletext.text ?? ""
+        }// вытаскиваю значение textfiels в тип Sting
     
     @IBOutlet weak var resultscreen: UILabel!
     
     @IBAction func actreverse(_ sender: UIButton!) {
-        var wordToReverse = ""
-        wordToReverse = sampletext.text!
+        let sampleSentence = sample
+                
+            func reverseWolrdsInSentance(sentanse:String) -> String{
+                let allWords = sampleSentence.components(separatedBy: " ")
+                var newSentence = ""
+                for word in allWords{
+                 if newSentence != ""{
+                     newSentence += " " }
+                let reverseWord = String(word.reversed())
+                newSentence += reverseWord}
+                
+                return newSentence}
+                resultscreen.text = reverseWolrdsInSentance(sentanse: sampleSentence)
         
-        
-        reverseWord()
-        func reverseWord(){
-            var tempReverseWord = String(wordToReverse.reversed())
-            tempReverseWord = tempReverseWord.uppercased()
-            resultscreen.text = tempReverseWord
-        }
-       
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        sampletext.resignFirstResponder()
+                actReverseStyle.setTitle("Clear", for: .normal)
+            }
+            
+   
     }
     
   
-    }
+    
+    
+        
+
 
 
     
