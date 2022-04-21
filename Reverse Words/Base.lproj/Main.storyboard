@@ -11,7 +11,7 @@
         <!--Reverse Words-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,9 +90,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Reverse Words" id="bgh-Ba-7l9" propertyAccessControl="all"/>
                     <connections>
-                        <outlet property="actReverseStyle" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
                         <outlet property="resultLabel" destination="dvJ-kg-pWH" id="IOI-sy-ieJ"/>
-                        <outlet property="reverseTextFiel" destination="Jzz-N5-CC0" id="HTv-h5-ca4"/>
+                        <outlet property="reverseButton" destination="JGG-Wl-cqA" id="xp8-VY-Ufh"/>
+                        <outlet property="reverseTextField" destination="Jzz-N5-CC0" id="y4d-PR-GoE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
