@@ -17,7 +17,7 @@ final class  ReverseWordsViewController: UIViewController, UITextFieldDelegate {
         reverseTextField.delegate = self
         reverseTextField.endEditing(true)
     }
-     internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+   internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         reverseButton.setTitle("Reverse", for: .normal)
         reverseTextField.endEditing(true)
         return true
